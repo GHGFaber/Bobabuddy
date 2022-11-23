@@ -34,21 +34,7 @@ echo makeTable($rows);
 
 <h2>Menu!</h2>
 <p>Milk Teas<p>
-<TR>
-	<TD class = "select"> YO
-	</TD>
-	<TD ALIGN = "center">
-	 <select>
-		<option value="YUH">YO</option>
-		<option value="YUH">NYAHELLO</option>	
-		<option value="YUH">YUH</option>
-		<option value="YUH">YUH</option>
-		<option value="YUH">YUH</option>	
-		<option value="YUH">YUH</option>
-	 	<option value="YUH">YUH</option>
-	 </select>
-	</TD>
-</TR>
+
 <?php
 $db = get_mysqli_connection();
 $query = $db->prepare("SELECT drinkname FROM Drinklist where categoryID = 1");
