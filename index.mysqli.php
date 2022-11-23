@@ -40,7 +40,7 @@ echo makeTable($rows);
 	<TD ALIGN = "center">
 	 <select>
 		<option value="YUH">YO</option>
-		<option value="YUH">YUH</option>	
+		<option value="YUH">NYAHELLO</option>	
 		<option value="YUH">YUH</option>
 		<option value="YUH">YUH</option>
 		<option value="YUH">YUH</option>	
