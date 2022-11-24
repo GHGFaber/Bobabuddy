@@ -47,14 +47,7 @@ foreach($yuh as $value) {
 }
 ?>
 
-<?
-	//$list=$mysql_query("select drinkname from Drinklist where categoryID = 1 order by drinkID"
-	while($row_list=mysql_fetch_assoc($list)){
-	?>
-	<select>
-	<option value = "<? echo $row_list['drinkname']; ?>">
-	</select> 
-<?php
+<?php /*
 $select_form = new PhpFormBuilder();
 $select_form->set_att("method", "POST");
 $select_form->add_input("id to search for", array(
@@ -94,7 +87,7 @@ if (isset($_POST["search"])) {
     else{
         echo "Error executing query: " . mysqli_error();
     }
-}
+}*/
 
 ?>
 
@@ -128,12 +121,12 @@ if (isset($_POST["insert"]) && !empty($_POST["insert_data"])) {
 }
 ?>
 
-<h2>SQL UPDATE using input from form</h2>
+<h2>Update a Drink's Name</h2>
 
 <?php
 $update_form = new PhpFormBuilder();
 $update_form->set_att("method", "POST");
-$update_form->add_input("id to update data for", array(
+$update_form->add_input("drinkID", array(
     "type" => "number"
 ), "update_id");
 $update_form->add_input("data to update", array(
@@ -153,29 +146,26 @@ if (isset($_POST["update"])
     echo "updating $dataToUpdate ...";
 
     $db = get_mysqli_connection();
-    $query = $db->prepare("update hello set data= ? where id = ?");
+    $query = $db->prepare("update Drinklist set drinkname= ? where drinkID = ?");
     $query->bind_param("si", $dataToUpdate, $idToUpdate);
-    if ($query->execute()) {    
+    /*if ($query->execute()) {    
         header( "Location: " . $_SERVER['PHP_SELF']);
     }
     else {
         echo "Error updating: " . mysqli_error();
-    }
+    }*/
 }
 
 ?>
 
-<h2>SQL DELETE using input from form</h2>
+<h2>Remove a Drink from the Menu</h2>
 
 <?php
 $delete_form = new PhpFormBuilder();
 $delete_form->set_att("method", "POST");
-$delete_form->add_input("id to delete for", array(
+$delete_form->add_input("drinkID to delete for", array(
     "type" => "number"
 ), "delete_id");
-$delete_form->add_input("data to delete", array(
-    "type" => "text"
-), "delete_data");
 $delete_form->add_input("Delete", array(
     "type" => "submit",
     "value" => "Delete"
@@ -191,10 +181,11 @@ if (isset($_POST["delete"])) {
 
     if (!empty($_POST["delete_id"])) {
         echo "deleting by id...";
-        $query = $db->prepare("delete from hello where id = ?");
+        $query = $db->prepare("call RemoveDrink(?)");
         $query->bind_param("i", $_POST["delete_id"]);
+        $query->execute();
     }
-    else if (!empty($_POST["delete_data"])) {
+    /*else if (!empty($_POST["delete_data"])) {
         echo "deleting by data...";
         $query = $db->prepare("delete from hello where data = ?");
         $query->bind_param("s", $_POST["delete_data"]);
@@ -206,6 +197,6 @@ if (isset($_POST["delete"])) {
     }
     else{
         echo "Error executing delete query: " . mysqli_error();
-    }
+    }*/
 }
 ?>
