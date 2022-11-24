@@ -109,13 +109,14 @@ if (isset($_POST["insert"]) && !empty($_POST["insert_data"])) {
     echo "inserting $dataToInsert ...";
 
     $db = get_mysqli_connection();
-    $query = $db->prepare("insert into hello (data) values (?)");
-    $query->bind_param("s", $dataToInsert);
+    $query = $db->prepare("insert into Drinklist (drinkname) values (?)");
+    $query->bind_param(1, $dataToInsert, PDO::PARAM_STR);
     if ($query->execute()) {    
         header( "Location: " . $_SERVER['PHP_SELF']);
     }
     else {
         echo "Error inserting: " . mysqli_error();
+        print_r($db->errorInfo());
     }
 }
 ?>
