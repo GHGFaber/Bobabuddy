@@ -32,7 +32,6 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
 echo makeTable($rows);
 ?>
 
-<h2>Menu!</h2>
 <p>Milk Teas<p>
 
 <?php
