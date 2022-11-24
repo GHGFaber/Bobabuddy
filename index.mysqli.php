@@ -19,7 +19,7 @@ if (!empty($_SESSION["affected_rows"])) {
 }
 ?>
 
-<h2>SQL SELECT -> HTML Table using <a href="https://www.php.net/manual/en/book.mysqli.php">mysqli</a></h2>
+<h2>Full Drink Menu</h2>
 <?php
 
 $db = get_mysqli_connection();
