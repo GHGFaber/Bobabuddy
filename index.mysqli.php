@@ -37,25 +37,16 @@ echo makeTable($rows);
 
 <?php
 $db = get_mysqli_connection();
-$query = $db->prepare("SELECT drinkname FROM Drinklist where categoryID = 1");
-$query->execute();
-
-$result = $query->get_result();
-$rows = $result->fetch_all(MYSQLI_ASSOC);
-
-echo makeTable($rows);
-?>
-
-<?php
-$db = get_mysqli_connection();
 $list = $db->prepare("select drinkname from Drinklist where categoryID = 1 order by drinkID" );
 $list->execute();
 
 $result = $list->get_result();
 $yuh = $result->fetch_all(MYSQLI_ASSOC);
-
-echo makeTable($yuh);
+foreach($yuh as $value) {
+    echo $value['drinkname']. "<br>";
+}
 ?>
+
 <?
 	//$list=$mysql_query("select drinkname from Drinklist where categoryID = 1 order by drinkID"
 	while($row_list=mysql_fetch_assoc($list)){
