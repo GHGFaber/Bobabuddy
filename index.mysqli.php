@@ -92,7 +92,7 @@ if (isset($_POST["search"])) {
 
 <h2>SQL INSERT using input from form</h2>
 
-<?php/*
+<?php/
 $insert_form = new PhpFormBuilder();
 $insert_form->set_att("method", "POST");
 $insert_form->add_input("data to insert", array(
@@ -118,7 +118,7 @@ if (isset($_POST["insert"]) && !empty($_POST["insert_data"])) {
         echo "Error inserting: " . mysqli_error();
         print_r($db->errorInfo());
     }
-}*/
+}
 ?>
 
 <h2>Update a Drink's Name</h2>
