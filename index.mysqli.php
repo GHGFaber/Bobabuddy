@@ -148,6 +148,7 @@ if (isset($_POST["update"])
     $db = get_mysqli_connection();
     $query = $db->prepare("update Drinklist set drinkname= ? where drinkID = ?");
     $query->bind_param("si", $dataToUpdate, $idToUpdate);
+    $query->execute();
     /*if ($query->execute()) {    
         header( "Location: " . $_SERVER['PHP_SELF']);
     }
