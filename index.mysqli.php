@@ -31,9 +31,9 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
 
 echo makeTable($rows);
 ?>
-
-<p>Milk Teas<p>
-
+<p>_______________________________________________<p>
+<p>Milk Teas List<p>
+<p>_______________________________________________<p>
 <?php
 $db = get_mysqli_connection();
 $list = $db->prepare("select drinkname from Drinklist where categoryID = 1 order by drinkID" );
@@ -90,27 +90,160 @@ if (isset($_POST["search"])) {
 
 ?>
 
+
+<?php
+$db = get_mysqli_connection();
+$query = $db->prepare("SELECT DISTINCT categoryName from Drinklist WHERE categoryName = 'MilkTea' ");
+if (!$query) {
+  echo mysqli_error($db);
+}
+if (!$query->execute())
+{
+  echo mysqli_error($db);
+}
+
+// Getting the results will bring the results from the database into PHP.
+// This lets you view each row as an associative array
+$result0 = $query->get_result();
+?>
+
+<?php
+$db = get_mysqli_connection();
+$query = $db->prepare("SELECT DISTINCT categoryName from Drinklist WHERE categoryName = 'TropicalTea' ");
+if (!$query) {
+  echo mysqli_error($db);
+}
+if (!$query->execute())
+{
+  echo mysqli_error($db);
+}
+
+// Getting the results will bring the results from the database into PHP.
+// This lets you view each row as an associative array
+$result1 = $query->get_result();
+?>
+<?php
+$db = get_mysqli_connection();
+$query = $db->prepare("SELECT DISTINCT categoryName from Drinklist WHERE categoryName = 'Blended' ");
+if (!$query) {
+  echo mysqli_error($db);
+}
+if (!$query->execute())
+{
+  echo mysqli_error($db);
+}
+
+
+$result2 = $query->get_result();
+
+?>
+
 <h2>SQL INSERT using input from form</h2>
 
-<?php/
+<?php
+
 $insert_form = new PhpFormBuilder();
 $insert_form->set_att("method", "POST");
-$insert_form->add_input("data to insert", array(
+$rows = [];
+
+while ($row = $result0->fetch_assoc()) {
+    // Do something with each row: add it to an array, render HTML, etc.
+    $rows []= $row;
+
+    // This example just iterates over the columns of the rows and builds a string
+    $rowtext = "";
+
+    foreach($row as $column) {
+        $rowtext = $rowtext . "$column ";
+    }
+
+    //echo "$rowtext <br>";
+}
+
+foreach($rows as $row) {
+    $rowid0 = $row["categoryName"];
+    $rowdata0 = $row['categoryName'];
+
+}
+while ($row = $result1->fetch_assoc()) {
+    // Do something with each row: add it to an array, render HTML, etc.
+    $rows []= $row;
+
+    // This example just iterates over the columns of the rows and builds a string
+    $rowtext = "";
+
+    foreach($row as $column) {
+        $rowtext = $rowtext . "$column ";
+    }
+
+    //echo "$rowtext <br>";
+}
+
+foreach($rows as $row) {
+    $rowid1 = $row["categoryName"];
+    $rowdata1 = $row['categoryName'];
+
+}
+while ($row = $result2->fetch_assoc()) {
+    // Do something with each row: add it to an array, render HTML, etc.
+    $rows []= $row;
+
+    // This example just iterates over the columns of the rows and builds a string
+    $rowtext = "";
+
+    foreach($row as $column) {
+        $rowtext = $rowtext . "$column ";
+    }
+
+    //echo "$rowtext <br>";
+}
+
+foreach($rows as $row) {
+    $rowid2 = $row["categoryName"];
+    $rowdata2 = $row['categoryName'];
+
+}
+
+
+$insert_form->add_input("data to insert: drinkName", array(
     "type" => "text"
 ), "insert_data");
+
+$insert_form->add_input("data to insert: categoryName", array(
+    "type" => "select", 
+    "options" => [$rowdata0,$rowdata1,$rowdata2],
+
+    
+   ), "dropdown");
+
+
+
+
 $insert_form->add_input("Insert", array(
     "type" => "submit",
     "value" => "Insert"
 ), "insert");
+
 $insert_form->build_form();
 
-if (isset($_POST["insert"]) && !empty($_POST["insert_data"])) {
+if (isset($_POST["insert"]) && !empty($_POST["insert_data"]) && !empty($_POST["dropdown"])){
     $dataToInsert = htmlspecialchars($_POST["insert_data"]);
-    echo "inserting $dataToInsert ...";
+    $dataToInsert2 = htmlspecialchars($_POST["dropdown"]);
+    if ($dataToInsert2 == 'MilkTea')       
+      $dataToInsert3 = htmlspecialchars("1");
+    else if ($dataToInsert2 == 'TropicalTea') 
+       $dataToInsert3 = htmlspecialchars("2");
+    else if ($dataToInsert2 == 'Blended') 
+       $dataToInsert3 = htmlspecialchars("3");
+
+    echo "inserting $dataToInsert ... $dataToInsert2 ... $dataToInsert3";
 
     $db = get_mysqli_connection();
-    $query = $db->prepare("insert into Drinklist (drinkname) values (?)");
-    $query->bind_param(1, $dataToInsert, PDO::PARAM_STR);
+    
+
+    $query = $db->prepare("INSERT INTO Drinklist (drinkname, categoryname, categoryid) VALUES (?, ?, ?)");
+    
+    $query->bind_param("sss", $dataToInsert, $dataToInsert2, $dataToInsert3);
     if ($query->execute()) {    
         header( "Location: " . $_SERVER['PHP_SELF']);
     }

@@ -333,7 +333,7 @@ class PhpFormBuilder {
 						} else if ( $val['selected'] === $key ) {
 							$opt_insert = ' selected';
 						}
-						$end .= '<option value="' . $key . '"' . $opt_insert . '>' . $opt . '</option>';
+						$end .= '<option value="' . $opt . '"' . $opt_insert . '>' . $opt . '</option>';
 					}
 					$end .= '</select>';
 					break;

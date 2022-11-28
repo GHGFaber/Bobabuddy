@@ -95,7 +95,7 @@ if (isset($_POST["insert"]) && !empty($_POST["insert_data"])) {
 
     $db = get_pdo_connection();
     $query = $db->prepare("insert into hello (data) values (?)");
-    $query->bindParam(1, $dataToInsert, PDO::PARAM_STR);
+    $query->bindParam("s", $dataToInsert);
     if ($query->execute()) {    
         header( "Location: " . $_SERVER['PHP_SELF']);
     }

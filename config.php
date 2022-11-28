@@ -56,7 +56,7 @@ function get_pdo_connection() {
 
             $conn = new PDO(
                 "mysql:host=localhost;dbname=bobabuddy",  // change dbname
-                "mfuentesrive",                          // change username
+                "bobabuddy",                          // change username
                 "yddubabob3420F22",                      // change password
                 $options);
         }
