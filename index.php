@@ -15,5 +15,5 @@ require_once("config.php");
     <?php echo "Welcome "; ?>
     <li><a href="index.mysqli.php">Examples with mysqli</a></li>
     <li><a href="index.pdo.php">Examples with PDO</a></li>
-    <li><a href="login">Client Sign In</a></li>
+    <li><a href="login.php">Client Sign In</a></li>
 </ul>
