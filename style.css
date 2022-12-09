@@ -14,7 +14,19 @@ h1,h2,h3 {
 h1 {
     text-align: center;
 }
-li :hover{
-    font-weight:bold;
+#yuh {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    color: rgba(1,1,1,0.7);
+}
+
+#yuh a {
+    font-weight: bold;
     font-size: 4em;
+    transition: all 500ms;
+}
+    
+#yuh a:hover {
+    font-size:88px;
+    font-size-adjust: 20px;
 }
