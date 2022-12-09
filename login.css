@@ -8,6 +8,7 @@
     font-weight: bold;
     font-size: 4em;
     transition: all 500ms;
+    color: rgba(255, 145, 0, 0.7);
 }
     
 #yuh h1:hover {
