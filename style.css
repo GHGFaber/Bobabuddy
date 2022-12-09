@@ -14,3 +14,7 @@ h1,h2,h3 {
 h1 {
     text-align: center;
 }
+li :hover{
+    font-weight:bold;
+    font-size: 4em;
+}
