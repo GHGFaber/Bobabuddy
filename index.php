@@ -12,6 +12,8 @@ require_once("config.php");
 <body>
 <h1><?= $PROJECT_NAME?></h1>
 <ul>
+    <?php echo "Welcome "; ?>
     <li><a href="index.mysqli.php">Examples with mysqli</a></li>
     <li><a href="index.pdo.php">Examples with PDO</a></li>
+    <li><a href="login">Client Sign In</a></li>
 </ul>
