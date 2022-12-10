@@ -12,7 +12,7 @@ require_once("config.php");
 <body>
 <h1><?= $PROJECT_NAME?></h1>
 
-<h1> Here is your drink roster <h2>
+<h2> Here is your drink roster <h2>
 <?php
 if (!empty($_SESSION["affected_rows"])) {
     echo "Deleted " . $_SESSION["affected_rows"] . " rows";
