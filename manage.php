@@ -49,41 +49,6 @@ $db = get_mysqli_connection();
 if(Categories == "MilkTeas")
     $query = $db->prepare("SELECT * FROM ViewMT;");
 ?>
-<?php
-
-$select_form->add_input("data to insert: categoryName", array(
-    "type" => "select", 
-    "options" => [$rowdata0,$rowdata1,$rowdata2],
-
-    
-   ), "dropdown");
-
-$insert_form->add_input("Search", array(
-    "type" => "submit",$query = $db->prepare("SELECT * FROM ViewMT;");
-    "value" => "Search"
-), "Search");
-
-
-$insert_form->build_form();
-$db = get_mysqli_connection();
-if (!empty($_POST["dropdown"])){
-    $dataToInsert2 = htmlspecialchars($_POST["dropdown"]);
-    if ($dataToInsert2 == 'MilkTea') 
-             
-    else if ($dataToInsert2 == 'TropicalTea') 
-       $dataToInsert3 = htmlspecialchars("2");
-    else if ($dataToInsert2 == 'Blended') 
-       $dataToInsert3 = htmlspecialchars("3");
-    
-    if ($query->execute()) {    
-        header( "Location: " . $_SERVER['PHP_SELF']);
-    }
-    else {
-        echo "Error searching: " . mysqli_error();
-        print_r($db->errorInfo());
-    }
-}
-?>
 
 <p>_______________________________________________<p>
 <p>Milk Teas List<p>
