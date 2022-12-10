@@ -33,7 +33,7 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
 echo makeTable($rows);
 ?>
 
-<div> View by: </div>
+<div> View by: 
 
 <label for="Categories">Choose a car:</label>
 <select id="Categories" name="Categories">
@@ -41,6 +41,8 @@ echo makeTable($rows);
   <option value="TropicalTea">Saab</option>
   <option value="Blended">Fiat</option>
 </select>
+
+</div>
 
 <?php
 $db = get_mysqli_connection();
