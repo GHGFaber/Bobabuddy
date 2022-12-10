@@ -36,7 +36,7 @@ echo makeTable($rows);
 <div> View by: </div>
 <?php
 
-$insert_form->add_input("data to insert: categoryName", array(
+$select_form->add_input("data to insert: categoryName", array(
     "type" => "select", 
     "options" => [$rowdata0,$rowdata1,$rowdata2],
 
