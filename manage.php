@@ -34,6 +34,19 @@ echo makeTable($rows);
 ?>
 
 <div> View by: </div>
+
+<label for="Categories">Choose a car:</label>
+<select id="Categories" name="Categories">
+  <option value="MilkTea">Volvo</option>
+  <option value="TropicalTea">Saab</option>
+  <option value="Blended">Fiat</option>
+</select>
+
+<?php
+$db = get_mysqli_connection();
+if(Categories == "MilkTeas")
+    $query = $db->prepare("SELECT * FROM ViewMT;");
+?>
 <?php
 
 $select_form->add_input("data to insert: categoryName", array(
@@ -44,7 +57,7 @@ $select_form->add_input("data to insert: categoryName", array(
    ), "dropdown");
 
 $insert_form->add_input("Search", array(
-    "type" => "submit",
+    "type" => "submit",$query = $db->prepare("SELECT * FROM ViewMT;");
     "value" => "Search"
 ), "Search");
 
@@ -54,7 +67,7 @@ $db = get_mysqli_connection();
 if (!empty($_POST["dropdown"])){
     $dataToInsert2 = htmlspecialchars($_POST["dropdown"]);
     if ($dataToInsert2 == 'MilkTea') 
-       $query = $db->prepare("SELECT * FROM ViewMT;");      
+             
     else if ($dataToInsert2 == 'TropicalTea') 
        $dataToInsert3 = htmlspecialchars("2");
     else if ($dataToInsert2 == 'Blended') 
