@@ -12,7 +12,6 @@ require_once("config.php");
 <body>
 <h1><?= $PROJECT_NAME?></h1>
 
-<h2> Here is your drink roster <h2>
 <?php
 if (!empty($_SESSION["affected_rows"])) {
     echo "Deleted " . $_SESSION["affected_rows"] . " rows";
@@ -20,7 +19,7 @@ if (!empty($_SESSION["affected_rows"])) {
 }
 ?>
 
-<h2>Full Drink Menu</h2>
+<h2> Here is your drink roster <h2>
 <?php
 
 $db = get_mysqli_connection();
@@ -32,6 +31,9 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
 
 echo makeTable($rows);
 ?>
+
+<div> View by: </div>
+
 <p>_______________________________________________<p>
 <p>Milk Teas List<p>
 <p>_______________________________________________<p>
