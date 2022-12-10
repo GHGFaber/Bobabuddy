@@ -13,6 +13,7 @@ require_once("config.php");
 <h1><?= $PROJECT_NAME?></h1>
 
 <?php
+
 if (!empty($_SESSION["affected_rows"])) {
     echo "Deleted " . $_SESSION["affected_rows"] . " rows";
     unset($_SESSION["affected_rows"]);
@@ -33,6 +34,41 @@ echo makeTable($rows);
 ?>
 
 <div> View by: </div>
+<?php
+
+$insert_form->add_input("data to insert: categoryName", array(
+    "type" => "select", 
+    "options" => [$rowdata0,$rowdata1,$rowdata2],
+
+    
+   ), "dropdown");
+
+$insert_form->add_input("Search", array(
+    "type" => "submit",
+    "value" => "Search"
+), "Search");
+
+
+$insert_form->build_form();
+$db = get_mysqli_connection();
+if (!empty($_POST["dropdown"])){
+    $dataToInsert2 = htmlspecialchars($_POST["dropdown"]);
+    if ($dataToInsert2 == 'MilkTea') 
+       $query = $db->prepare("SELECT * FROM ViewMT;");      
+    else if ($dataToInsert2 == 'TropicalTea') 
+       $dataToInsert3 = htmlspecialchars("2");
+    else if ($dataToInsert2 == 'Blended') 
+       $dataToInsert3 = htmlspecialchars("3");
+    
+    if ($query->execute()) {    
+        header( "Location: " . $_SERVER['PHP_SELF']);
+    }
+    else {
+        echo "Error searching: " . mysqli_error();
+        print_r($db->errorInfo());
+    }
+}
+?>
 
 <p>_______________________________________________<p>
 <p>Milk Teas List<p>
