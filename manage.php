@@ -46,7 +46,7 @@ echo makeTable($rows);
 
 <?php
 $db = get_mysqli_connection();
-$list = $db->prepare("select drinkname from Drinklist where categoryID = 1 order by drinkID" );
+$list = $db->prepare("select drinkname from ViewMT" );
 $list->execute();
 
 $result = $list->get_result();
