@@ -66,7 +66,7 @@ else if($varName == "TropicalTea"){
         }
 }
 else if($varName == "Blended"){
-    $sql = "select drinkname from ViewBlended";
+    $sql = "select drinkname from ViewBlend";
     $result = $db->query($sql);
     while($row = $result->fetch_assoc()){
         echo $row['drinkname']. "</br>";
