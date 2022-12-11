@@ -52,7 +52,7 @@ $list->execute();
 $result = $query->get_result();
 $yuh = $result->fetch_all(MYSQLI_ASSOC);
 foreach($yuh as $value) {
-    echo $value['drinkname']. "<br>";*/
+    echo $value['drinkname']. "<br>";
 ?>
 
 <p>_______________________________________________<p>
