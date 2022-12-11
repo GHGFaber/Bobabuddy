@@ -48,11 +48,11 @@ echo makeTable($rows);
 
 <?php
 $db = get_mysqli_connection();
-$list = $db->prepare("select drinkname from Drinklist" );
+$list = $db->prepare("select drinkname from ViewMT" );
 $list->execute();
 
 $result = $list->get_result();
-$yuh = $result->fetch_all(MYSQLI_ASSOC);
+$yuh = $result->fetch(MYSQLI_ASSOC);
 foreach($yuh as $value) {
     echo $value['drinkname']. "<br>";
 }
