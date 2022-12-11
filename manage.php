@@ -24,7 +24,7 @@ if (!empty($_SESSION["affected_rows"])) {
 <?php
 
 $db = get_mysqli_connection();
-$query = $db->prepare("SELECT * FROM Drinklist");
+$query = $db->prepare("SELECT drinkname FROM Drinklist");
 $query->execute();
 
 $result = $query->get_result();
