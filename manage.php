@@ -46,13 +46,14 @@ echo makeTable($rows);
 
 <?php
 $db = get_mysqli_connection();
-$list= $db->prepare("select drinkname from Drinklist where categoryID = 1" );
+$list = $db->prepare("select drinkname from Drinklist where categoryID = 1 order by drinkID" );
 $list->execute();
 
 $result = $list->get_result();
-$woah = $result->fetch_all(MYSQLI_ASSOC);
-foreach($woah as $value) {
+$yuh = $result->fetch_all(MYSQLI_ASSOC);
+foreach($yuh as $value) {
     echo $value['drinkname']. "<br>";
+}
 ?>
 
 <p>_______________________________________________<p>
