@@ -34,12 +34,15 @@ echo makeTable($rows);
 ?>
 
 <div> Alternate View </br>
+<form method = "post">
 <label for="Categories">Choose a category:</label>
 <select name="Categories">
   <option value="MilkTea">MilkTea</option>
   <option value="TropicalTea">TropicalTea</option>
   <option value="Blended">Blended</option>
 </select>
+<input type = "submit">
+</form>
 
 <?php
 if(isset($_POST['Categories']))
