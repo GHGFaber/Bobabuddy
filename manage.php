@@ -49,7 +49,7 @@ $db = get_mysqli_connection();
 $list= $db->prepare("select drinkname from Drinklist where categoryID = 1" );
 $list->execute();
 
-$result = $query->get_result();
+$result = $list->get_result();
 $yuh = $result->fetch_all(MYSQLI_ASSOC);
 foreach($yuh as $value) {
     echo $value['drinkname']. "<br>";
