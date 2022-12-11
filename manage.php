@@ -50,7 +50,7 @@ echo makeTable($rows);
 $db = get_mysqli_connection();
 $result = mysql_query("select drinkname from ViewMT");
 
-echo $reslt['drinkname'];
+echo $result['drinkname'];
 }
 ?>
 
