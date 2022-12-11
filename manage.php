@@ -44,7 +44,7 @@ echo makeTable($rows);
 <?php
 if(isset($POST['Categories']))
 {
-    $varName = '';
+    $varName = "MilkTea";
 }
 if($varName == "MilkTea"){
     $db = get_mysqli_connection();
