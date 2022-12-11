@@ -37,16 +37,16 @@ echo makeTable($rows);
 
 <label for="Categories">Choose a category:</label>
 <select id="Categories" name="Categories">
-  <option value="MilkTea">Volvo</option>
-  <option value="TropicalTea">Saab</option>
-  <option value="Blended">Fiat</option>
+  <option value="MilkTea">MilkTea</option>
+  <option value="TropicalTea">TropicalTea</option>
+  <option value="Blended">Blended</option>
 </select>
 
 </div>
 
 <?php
 $db = get_mysqli_connection();
-if(Categories == "MilkTeas")
+if(Categories == "MilkTea")
     $query = $db->prepare("SELECT * FROM ViewMT;");
 ?>
 
