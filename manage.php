@@ -54,6 +54,7 @@ if(Categories == MilkTea){
     while($row = $result->fetch_assoc()){
         echo $row['drinkname']. "</br>";
     }
+}
 ?>
 
 <p>_______________________________________________<p>
