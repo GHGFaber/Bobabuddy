@@ -48,7 +48,7 @@ echo makeTable($rows);
 
 <?php
 $db = get_mysqli_connection();
-$list = $db->prepare("select drinkname from Drinlist" );
+$list = $db->prepare("select drinkname from Drinklist" );
 $list->execute();
 
 $result = $list->get_result();
