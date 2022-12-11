@@ -34,6 +34,7 @@ if (!empty($_SESSION["affected_rows"])) {
 <input type = "submit">
 </form>
 
+<div>
 <?php
 if(isset($_POST['Categories']))
 {
@@ -52,7 +53,8 @@ if($varName == "")
     }
 }
 ?>
-
+</div>
+<div2>
 <?php
 $db = get_mysqli_connection();
 if(isset($_POST['Categories']))
@@ -82,8 +84,8 @@ else if($varName == "Blended"){
     }
 }
 ?>
+</div2>
 
-</div>
 
 <?php /*
 $select_form = new PhpFormBuilder();
