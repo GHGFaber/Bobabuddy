@@ -47,7 +47,7 @@ echo makeTable($rows);
 
 
 <?php
-if($Categories == "MilkTea"){
+if($value == "MilkTea"){
     $db = get_mysqli_connection();
     $sql = "select drinkname from ViewMT";
     $result = $db->query($sql);
