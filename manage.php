@@ -48,7 +48,8 @@ echo makeTable($rows);
 
 <?php
 $db = get_mysqli_connection();
-$result = mysql_query("select drinkname from ViewMT");
+$sql = "select drinkname from ViewMT";
+$result = $db->query($sql);
 
 echo $result['drinkname'];
 ?>
