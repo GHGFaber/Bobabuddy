@@ -9,11 +9,11 @@ div2 {
     color: chartreuse;
 
 }
-div2 a{
+div2 {
     font-size: 24pt;
 
 }
-div2 a:hover{
+div2:hover{
     font-size: 30pt;
 
 }
