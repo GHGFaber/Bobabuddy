@@ -44,7 +44,7 @@ echo makeTable($rows);
 
 </div>
 
-<?php/*
+<?php
 $db = get_mysqli_connection();
 $query = $db->prepare("SELECT drinkname FROM ViewMT;");
 $query->execute();
