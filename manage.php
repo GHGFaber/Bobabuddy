@@ -105,7 +105,7 @@ else if($varName == "Blended"){
     $sql = "select * from Item";
     $result = $db->query($sql);
     while($row = $result->fetch_assoc()){
-        echo $row['indexID']. $row['OID']. $row['DID']. $row['drinksize']. $row['quantity'];
+        echo $row['indexID']. " ". $row['OID']. $row['DID']. $row['drinksize']. $row['quantity'] . "</br>"
     }
     ?>
 </div4>
