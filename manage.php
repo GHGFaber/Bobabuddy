@@ -45,6 +45,7 @@ echo makeTable($rows);
 </form>
 
 <?php
+$db = get_mysqli_connection();
 if(isset($_POST['Categories']))
 {
     $varName = "MilkTea";
@@ -58,7 +59,6 @@ if($varName == "MilkTea"){
     }
 
 else if($varName == "TropicalTea"){
-        $db = get_mysqli_connection();
         $sql = "select drinkname from ViewTT";
         $result = $db->query($sql);
         while($row = $result->fetch_assoc()){
