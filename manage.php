@@ -61,19 +61,6 @@ if($varName == "MilkTea"){
 
 </div>
 
-
-
-<?php
-if($value == "MilkTea"){
-    $db = get_mysqli_connection();
-    $sql = "select drinkname from ViewMT";
-    $result = $db->query($sql);
-    while($row = $result->fetch_assoc()){
-        echo $row['drinkname']. "</br>";
-    }
-}
-?>
-
 <p>_______________________________________________<p>
 <p>Milk Teas List<p>
 <p>_______________________________________________<p>
