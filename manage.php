@@ -43,10 +43,7 @@ echo makeTable($rows);
 </select>
 
 <?php
-if(isset($_POST['formSubmit']) )
-{
-  $varName = $_POST['Categories'];
-}
+$varName = $_POST['Categories'];
 
 if($varName == "MilkTea"){
     $db = get_mysqli_connection();
