@@ -85,6 +85,8 @@ else if($varName == "Blended"){
 ?>
 </div2>
 
+<h3>Top 5 Drinks Sold <h3>
+
 <div3>
     <?php
     $db = get_mysqli_connection();
