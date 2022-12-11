@@ -98,6 +98,18 @@ else if($varName == "Blended"){
      
     ?>
 </div3>
+
+<div4>
+    <?php
+    $db = get_mysqli_connection();
+    $sql = "select * from Item";
+    $result = $db->query($sql);
+    while($row = $result->fetch_assoc()){
+        echo $row['indexID']. $row['OID']. $row['DID']. $row['drinksize']. $row['quantity'];
+    }
+    ?>
+</div4>
+
 <?php /*
 $select_form = new PhpFormBuilder();
 $select_form->set_att("method", "POST");
