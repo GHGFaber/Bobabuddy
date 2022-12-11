@@ -85,7 +85,17 @@ else if($varName == "Blended"){
 ?>
 </div2>
 
-
+<div3>
+    <?php
+    $db = get_mysqli_connection();
+    $sql = "select drinkname from ViewTop5";
+    $result = $db->query($sql);
+    while($row = $result->fetch_assoc()){
+        echo $row['drinkname']. "</br>";
+    }
+     
+    ?>
+</div3>
 <?php /*
 $select_form = new PhpFormBuilder();
 $select_form->set_att("method", "POST");
