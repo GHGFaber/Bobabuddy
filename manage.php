@@ -48,13 +48,9 @@ echo makeTable($rows);
 
 <?php
 $db = get_mysqli_connection();
-$list = $db->prepare("select drinkname from ViewMT" );
-$list->execute();
+$result = mysql_query("select drinkname from ViewMT");
 
-$result = $list->get_result();
-$yuh = mysqli_fetch_array($result);
-foreach($yuh as $value) {
-    echo $value['drinkname']. "<br>";
+echo $reslt['drinkname'];
 }
 ?>
 
