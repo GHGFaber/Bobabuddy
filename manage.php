@@ -35,7 +35,7 @@ echo makeTable($rows);
 
 <div> Alternate View </br>
 
-<label for="Categories">Choose a category:</label>
+<label for="formName">Choose a category:</label>
 <select name="Categories">
   <option value="MilkTea">MilkTea</option>
   <option value="TropicalTea">TropicalTea</option>
