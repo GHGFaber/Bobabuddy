@@ -57,7 +57,7 @@ if($varName == "MilkTea"){
         echo $row['drinkname']. "</br>";
     }
 
-if($varName == "TropicalTea"){
+else if($varName == "TropicalTea"){
         $db = get_mysqli_connection();
         $sql = "select drinkname from ViewTT";
         $result = $db->query($sql);
