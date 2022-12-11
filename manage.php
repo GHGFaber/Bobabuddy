@@ -35,7 +35,7 @@ echo makeTable($rows);
 
 <div> Alternate View </br>
 
-<label for="formName">Choose a category:</label>
+<label for="Categories">Choose a category:</label>
 <select name="Categories">
   <option value="MilkTea">MilkTea</option>
   <option value="TropicalTea">TropicalTea</option>
@@ -45,7 +45,7 @@ echo makeTable($rows);
 <?php
 if(isset($_POST['formSubmit']) )
 {
-  $varName = $_POST['formName'];
+  $varName = $_POST['Categories'];
 }
 
 if($varName == "MilkTea"){
