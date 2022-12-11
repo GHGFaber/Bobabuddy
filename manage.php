@@ -51,7 +51,6 @@ $db = get_mysqli_connection();
 $result = mysql_query("select drinkname from ViewMT");
 
 echo $result['drinkname'];
-}
 ?>
 
 <p>_______________________________________________<p>
