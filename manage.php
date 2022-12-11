@@ -114,6 +114,16 @@ else if($varName == "Blended"){
     ?>
 </div4>
 
+<div5>
+    <?php
+    $db = get_mysqli_connection();
+    $sql = "select indexID, OID, DID, drinksize, quantity, drinkname from Item NATURAL JOIN Drinklist where DID = drinkID";
+    $result = $db->query($sql);
+    $row = $result->fetch_assoc();
+    echo makeTable($row);
+    ?>
+</div5>
+
 <?php /*
 $select_form = new PhpFormBuilder();
 $select_form->set_att("method", "POST");
