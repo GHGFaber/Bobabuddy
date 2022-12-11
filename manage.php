@@ -42,7 +42,7 @@ echo makeTable($rows);
 </select>
 
 <?php
-if(isset($POST['Categories']))
+if(isset($_POST['Categories']))
 {
     $varName = "MilkTea";
 }
