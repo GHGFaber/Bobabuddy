@@ -36,14 +36,19 @@ echo makeTable($rows);
 <div> Alternate View </br>
 
 <label for="Categories">Choose a category:</label>
-<select id="Categories" name="Categories">
+<select name="Categories">
   <option value="MilkTea">MilkTea</option>
   <option value="TropicalTea">TropicalTea</option>
   <option value="Blended">Blended</option>
 </select>
 
 <?php
-if($value == "MilkTea"){
+if(isset($_POST['formSubmit']) )
+{
+  $varName = $_POST['formName'];
+}
+
+if($varName == "MilkTea"){
     $db = get_mysqli_connection();
     $sql = "select drinkname from ViewMT";
     $result = $db->query($sql);
