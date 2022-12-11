@@ -40,13 +40,14 @@ if(!isset($_POST['Categories']))
 }
 if($varName == "")
 {
-$db = get_mysqli_connection();
-$query = $db->prepare("SELECT drinkname FROM Drinklist");
-$query->execute();
+    $db = get_mysqli_connection();
+    $query = $db->prepare("SELECT drinkname FROM Drinklist");
+    $query->execute();
 
-$result = $query->get_result();
-while($row = $result->fetch_assoc()){
-    echo $row['drinkname']. "</br>";
+    $result = $query->get_result();
+    while($row = $result->fetch_assoc()){
+        echo $row['drinkname']. "</br>";
+    }
 }
 ?>
 
