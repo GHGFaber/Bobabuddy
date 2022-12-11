@@ -46,10 +46,10 @@ echo makeTable($rows);
 
 <?php
 $db = get_mysqli_connection();
-if(Categories == "MilkTea")
+if(Categories == "MilkTea"){
     $query = $db->prepare("SELECT drinkname FROM ViewMT;");
     $query->execute();
-
+}
     $result = $query->get_result();
     $yuh = $result->fetch_all(MYSQLI_ASSOC);
     foreach($yuh as $value) {
