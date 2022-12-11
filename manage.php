@@ -30,6 +30,7 @@ $query->execute();
 $result = $query->get_result();
 while($row = $result->fetch_assoc()){
     echo $row['drinkname']. "</br>";
+}
 ?>
 
 <div> Alternate View </br>
