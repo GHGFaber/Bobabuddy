@@ -44,9 +44,11 @@ echo makeTable($rows);
 
 </div>
 
+
+
 <?php
 $db = get_mysqli_connection();
-$list = $db->prepare("select drinkname from `ViewMT`" );
+$list = $db->prepare("select drinkname from ViewMT" );
 $list->execute();
 
 $result = $list->get_result();
@@ -59,6 +61,7 @@ foreach($yuh as $value) {
 <p>_______________________________________________<p>
 <p>Milk Teas List<p>
 <p>_______________________________________________<p>
+
 <?php
 $db = get_mysqli_connection();
 $list = $db->prepare("select drinkname from Drinklist where categoryID = 1 order by drinkID" );
