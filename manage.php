@@ -52,7 +52,7 @@ $list = $db->prepare("select drinkname from ViewMT" );
 $list->execute();
 
 $result = $list->get_result();
-$yuh = $result->fetch(MYSQLI_ASSOC);
+$yuh = $result->fetch_all(MYSQLI_ASSOC);
 foreach($yuh as $value) {
     echo $value['drinkname']. "<br>";
 }
