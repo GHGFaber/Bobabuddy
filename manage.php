@@ -109,7 +109,7 @@ else if($varName == "Blended"){
     $sql = "select indexID, OID, DID, drinksize, quantity, drinkname from Item NATURAL JOIN Drinklist where DID = drinkID";
     $result = $db->query($sql);
     while($row = $result->fetch_assoc()){
-        echo $row['indexID']. " ". $row['OID']. " ". $row['DID']. " ". $row['drinksize']. " ". $row['quantity']. " ". $row['drinkname']  "</br>";
+        echo $row['indexID']. " ". $row['OID']. " ". $row['DID']. " ". $row['drinksize']. " ". $row['quantity']. " ". $row['drinkname'].  "</br>";
     }
     ?>
 </div4>
