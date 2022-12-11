@@ -33,9 +33,9 @@ $rows = $result->fetch_all(MYSQLI_ASSOC);
 echo makeTable($rows);
 ?>
 
-<div> View by: 
+<div> Alternate View </br>
 
-<label for="Categories">Choose a car:</label>
+<label for="Categories">Choose a category:</label>
 <select id="Categories" name="Categories">
   <option value="MilkTea">Volvo</option>
   <option value="TropicalTea">Saab</option>
