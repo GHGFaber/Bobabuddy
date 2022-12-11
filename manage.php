@@ -48,7 +48,7 @@ echo makeTable($rows);
 $db = get_mysqli_connection();
 if(isset($_POST['Categories']))
 {
-    $varName = "MilkTea";
+    $varName = "";
 }
 if($varName == "MilkTea"){
     $sql = "select drinkname from ViewMT";
