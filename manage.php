@@ -47,7 +47,7 @@ echo makeTable($rows);
 <?php
 $db = get_mysqli_connection();
 if(Categories == "MilkTea")
-    $query = $db->prepare("SELECT * FROM ViewMT;");
+    $query = $db->prepare("SELECT drinkname FROM ViewMT;");
     $query->execute();
 
     $result = $query->get_result();
