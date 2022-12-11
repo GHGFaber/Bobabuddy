@@ -35,7 +35,7 @@ if (!empty($_SESSION["affected_rows"])) {
 </form>
 
 <?php
-if(!isset($_POST['Categories']))
+if(isset($_POST['Categories']))
 {
     $varName = $_POST['Categories'];
 }
