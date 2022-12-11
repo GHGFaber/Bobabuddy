@@ -115,6 +115,7 @@ else if($varName == "Blended"){
 </div4>
 
 <div5>
+    <h1> All Orders </h1>
     <?php
     $db = get_mysqli_connection();
     $sql = "select indexID, OID, DID, drinksize, quantity, drinkname from Item NATURAL JOIN Drinklist where DID = drinkID";
