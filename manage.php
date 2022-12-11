@@ -28,9 +28,8 @@ $query = $db->prepare("SELECT drinkname FROM Drinklist");
 $query->execute();
 
 $result = $query->get_result();
-$rows = $result->fetch_all(MYSQLI_ASSOC);
-
-echo makeTable($rows);
+while($row = $result->fetch_assoc()){
+    echo $row['drinkname']. "</br>";
 ?>
 
 <div> Alternate View </br>
