@@ -56,6 +56,14 @@ if($varName == "MilkTea"){
     while($row = $result->fetch_assoc()){
         echo $row['drinkname']. "</br>";
     }
+
+if($varName == "TropicalTea"){
+        $db = get_mysqli_connection();
+        $sql = "select drinkname from ViewTT";
+        $result = $db->query($sql);
+        while($row = $result->fetch_assoc()){
+            echo $row['drinkname']. "</br>";
+        }
 }
 ?>
 
