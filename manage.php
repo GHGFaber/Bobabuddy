@@ -34,7 +34,6 @@ if (!empty($_SESSION["affected_rows"])) {
 <input type = "submit">
 </form>
 
-<div>
 <?php
 if(isset($_POST['Categories']))
 {
