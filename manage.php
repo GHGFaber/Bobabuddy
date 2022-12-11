@@ -39,6 +39,10 @@ if(isset($_POST['Categories']))
 {
     $varName = $_POST['Categories'];
 }
+else
+{
+    $varName = "";
+}
 
 if($varName == "")
 {
@@ -102,7 +106,7 @@ else if($varName == "Blended"){
 <div4>
     <?php
     $db = get_mysqli_connection();
-    $sql = "select * from Item";
+    $sql = "select indexID, OID, DID, drinksize, drink from Item ";
     $result = $db->query($sql);
     while($row = $result->fetch_assoc()){
         echo $row['indexID']. " ". $row['OID']. " ". $row['DID']. " ". $row['drinksize']. " ". $row['quantity']. "</br>";
