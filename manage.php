@@ -47,11 +47,13 @@ echo makeTable($rows);
 
 
 <?php
-$db = get_mysqli_connection();
-$sql = "select drinkname from ViewMT";
-$result = $db->query($sql);
-while($row = $result->fetch_assoc()){
-    echo $row['drinkname']. "</br>";
+if(Categories == MilkTea){
+    $db = get_mysqli_connection();
+    $sql = "select drinkname from ViewMT";
+    $result = $db->query($sql);
+    while($row = $result->fetch_assoc()){
+        echo $row['drinkname']. "</br>";
+    }
 }
 ?>
 
