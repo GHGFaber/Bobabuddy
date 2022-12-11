@@ -48,6 +48,12 @@ echo makeTable($rows);
 $db = get_mysqli_connection();
 if(Categories == "MilkTea")
     $query = $db->prepare("SELECT * FROM ViewMT;");
+    $query->execute();
+
+    $result = $query->get_result();
+    $yuh = $result->fetch_all(MYSQLI_ASSOC);
+    foreach($yuh as $value) {
+        echo $value['drinkname']. "<br>";
 ?>
 
 <p>_______________________________________________<p>
