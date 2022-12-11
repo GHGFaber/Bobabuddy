@@ -46,7 +46,7 @@ echo makeTable($rows);
 
 <?php
 $db = get_mysqli_connection();
-$query = $db->prepare("select drinkname from ViewMT;");
+$query = $db->prepare("select drinkname from ViewMT");
 $query->execute();
 $result = $query->get_result();
 $yuh = $result->fetch_all(MYSQLI_ASSOC);
