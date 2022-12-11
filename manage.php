@@ -21,17 +21,6 @@ if (!empty($_SESSION["affected_rows"])) {
 ?>
 
 <h2> Here is your drink roster <h2>
-<?php
-
-$db = get_mysqli_connection();
-$query = $db->prepare("SELECT drinkname FROM Drinklist");
-$query->execute();
-
-$result = $query->get_result();
-while($row = $result->fetch_assoc()){
-    echo $row['drinkname']. "</br>";
-}
-?>
 
 <div> Alternate View </br>
 <form method = "post">
@@ -43,6 +32,18 @@ while($row = $result->fetch_assoc()){
 </select>
 <input type = "submit">
 </form>
+
+<?php
+
+$db = get_mysqli_connection();
+$query = $db->prepare("SELECT drinkname FROM Drinklist");
+$query->execute();
+
+$result = $query->get_result();
+while($row = $result->fetch_assoc()){
+    echo $row['drinkname']. "</br>";
+}
+?>
 
 <?php
 $db = get_mysqli_connection();
