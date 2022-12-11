@@ -26,7 +26,6 @@ if (!empty($_SESSION["affected_rows"])) {
 <form method = "post">
 <label for="Categories">Choose a category:</label>
 <select name="Categories">
-  <option value=""></""option>
   <option value="MilkTea">MilkTea</option>
   <option value="TropicalTea">TropicalTea</option>
   <option value="Blended">Blended</option>
