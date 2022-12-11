@@ -50,8 +50,8 @@ $list= $db->prepare("select drinkname from Drinklist where categoryID = 1" );
 $list->execute();
 
 $result = $list->get_result();
-$yuh = $result->fetch_all(MYSQLI_ASSOC);
-foreach($yuh as $value) {
+$woah = $result->fetch_all(MYSQLI_ASSOC);
+foreach($woah as $value) {
     echo $value['drinkname']. "<br>";
 ?>
 
