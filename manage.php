@@ -82,8 +82,9 @@ else if($varName == "Blended"){
 <input type = "submit">
 </form>
 </div>
-</div1>
 <p>====================================================</p>
+</div1>
+
 <h3>Top 5 Drinks Sold </h3>
 
 <div3>
