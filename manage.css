@@ -4,6 +4,8 @@ h1 {
 div {
     text-align: center;
     font-size: 12pt;
+    fill: cadetblue;
+    border: 11px;
 
 }
 div1{
