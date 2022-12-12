@@ -3,7 +3,14 @@ body{
 }
 h1 {
     color:white
-    text-align: left;
+}
+
+h2{
+    color:white
+}
+
+div1 {
+    color:white
 }
 div {
     align-items: left;
