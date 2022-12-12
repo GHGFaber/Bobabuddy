@@ -82,6 +82,7 @@ else if($varName == "Blended"){
 </form>
 </div>
 </div1>
+
 <h3>Top 5 Drinks Sold <h3>
 
 <div3>
@@ -94,7 +95,7 @@ else if($varName == "Blended"){
     {
         $varName = "";
     }
-   
+    
     if($varName == "")
     {
         $db = get_mysqli_connection();
@@ -244,7 +245,7 @@ $result2 = $query->get_result();
 
 ?>
 
-<h2>SQL INSERT using input from form</h2>
+<h2>Add a drink</h2>
 
 <?php
 
