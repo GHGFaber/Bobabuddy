@@ -87,8 +87,8 @@ else if($varName == "Blended"){
 <div3>
     <div> Alternate View </br>
     <form method = "post">
-    <label for="Categories">Choose a category:</label>
-    <select name="Categories">
+    <label for="CategoryV">Choose a category:</label>
+    <select name="CategoriesV">
         <option value=""> </option>
         <option value="MilkTea">MilkTea</option>
         <option value="TropicalTea">TropicalTea</option>
@@ -98,9 +98,9 @@ else if($varName == "Blended"){
     </form>
     </div>
     <?php
-    if(isset($_POST['Categories']))
+    if(isset($_POST['CategoriesV']))
     {
-        $varName = $_POST['Categories'];
+        $varName = $_POST['CategoriesV'];
     }
     else
     {
