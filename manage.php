@@ -20,7 +20,7 @@ if (!empty($_SESSION["affected_rows"])) {
 }
 ?>
 
-<h2> Here is your drink roster <h2>
+<h2> Here is your drink roster </h2>
 <div1>
 <?php
 $db = get_mysqli_connection();
