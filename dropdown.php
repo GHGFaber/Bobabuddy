@@ -64,12 +64,14 @@ echo $rat[0];
 
 //Drink Size Dropdown Menu//
 echo "<br>QTY.: ";
-echo "<select id=qty class='form-control' style='width:80px;'>";
+echo "<select id=qty name=qty onChange='reloadp()' class='form-control' style='width:80px;'>";
+$rat=$_GET['pat'];
 for($counter = 1; $counter <= 10; $counter++)
     echo "<option value=$counter selected>$counter</option>";
 echo "<option value='' selected>--Select--</option>";
 echo "</select>";
 echo "</form>";
+echo $rat[0];
 //Button//
 
 if(isset($_POST['Order']) && isset($_POST['DrinkT']))
@@ -108,6 +110,12 @@ function reloads()
 {
     var v3=document.getElementById('DrinkSize').value;
     self.location='dropdown.php?rat=' + v3;
+
+}
+function reloadp()
+{
+    var v4=document.getElementById('qty').value;
+    self.location='dropdown.php?pat=' + v4;
 
 }
 </script>
