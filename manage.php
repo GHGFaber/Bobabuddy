@@ -151,6 +151,7 @@ else if($varName == "Blended"){
     $result = $db->query($sql);
     while($row = $result->fetch_assoc()){
         echo $row['drinkname']. "</br>";
+    }
     //$row = $result->fetch_all(MYSQLI_ASSOC);
     //echo makeTable($row);
     ?>
