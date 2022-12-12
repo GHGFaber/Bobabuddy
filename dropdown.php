@@ -52,7 +52,7 @@ echo $dog[0];
 
 //Drink Size Dropdown Menu//
 echo "<br>Drink Size: ";
-echo "<select id=DrinkSize onChange='reloads()' class='form-control' style='width:80px;'>";
+echo "<select id=DrinkSize name=DrinkSize onChange='reloads()' class='form-control' style='width:80px;'>";
 $rat=$_GET['rat'];
 echo "<option value='L' selected>L</option>";
 echo "<option value='M' selected>M</option>";
