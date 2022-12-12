@@ -15,7 +15,7 @@ $query0 = $db->prepare("SELECT DISTINCT categoryID, categoryName FROM Drinklist"
 $query0->execute();
 $result0 = $query0->get_result();
 
-echo "<select id=DrinkType name=DrinkT onChange='reload()' class='form-control' style='width:100px;'>";
+echo "<select id=DrinkType name=DrinkT onChange='reloadc()' class='form-control' style='width:100px;'>";
 
 $cat=$_GET['cat'];
 
@@ -37,7 +37,9 @@ $query1->bind_param('i', $cat);
 $query1->execute();
 $result1 = $query1->get_result();
 
-echo "<select id=DrinkID name=DrinkID  class='form-control' style='width:150px;'>";
+echo "<select id=DrinkID name=DrinkID  onChange='reloadd()' class='form-control' style='width:150px;'>";
+
+$dog=$_GET['dog'];
 
 while ($drinks = $result1->fetch_assoc())
     echo "<option value=$drinks[drinkID] selected> $drinks[drinkName]</option>";
@@ -83,10 +85,16 @@ function placeOrder()
 
 
 <script>
-function reload()
+function reloadc()
 {
     var v1=document.getElementById('DrinkType').value;
     self.location='dropdown.php?cat=' + v1;
+
+}
+function reloadd()
+{
+    var v2=document.getElementById('DrinkID').value;
+    self.location='dropdown.php?dog=' + v2;
 
 }
 </script>
