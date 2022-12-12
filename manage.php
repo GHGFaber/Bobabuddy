@@ -92,14 +92,58 @@ else if($varName == "Blended"){
 <h3>Top 5 Drinks Sold <h3>
 
 <div3>
+    <div> Alternate View </br>
+    <form method = "post">
+    <label for="Categories">Choose a category:</label>
+    <select name="Categories">
+        <option value=""> </option>
+        <option value="MilkTea">MilkTea</option>
+        <option value="TropicalTea">TropicalTea</option>
+        <option value="Blended">Blended</option>
+    </select>
+    <input type = "submit">
+    </form>
     <?php
-    $db = get_mysqli_connection();
-    $sql = "select drinkname from ViewTop5";
-    $result = $db->query($sql);
-    while($row = $result->fetch_assoc()){
-        echo $row['drinkname']. "</br>";
+    if(isset($_POST['Categories']))
+    {
+        $varName = $_POST['Categories'];
     }
-     
+    else
+    {
+        $varName = "";
+    }
+   
+    if($varName == "")
+    {
+        $db = get_mysqli_connection();
+        $sql = "select drinkname from ViewTop5";
+        $result = $db->query($sql);
+        while($row = $result->fetch_assoc()){
+            echo $row['drinkname']. "</br>";
+        }
+    }
+    else if($varName == "MilkTea"){
+        $sql = "select drinkname from ViewTop5MT";
+        $result = $db->query($sql);
+        while($row = $result->fetch_assoc()){
+            echo $row['drinkname']. "</br>";
+        }
+    }
+    
+    else if($varName == "TropicalTea"){
+            $sql = "select drinkname from ViewTop5TT";
+            $result = $db->query($sql);
+            while($row = $result->fetch_assoc()){
+                echo $row['drinkname']. "</br>";
+            }
+    }
+    else if($varName == "Blended"){
+        $sql = "select drinkname from ViewTop5Bl";
+        $result = $db->query($sql);
+        while($row = $result->fetch_assoc()){
+            echo $row['drinkname']. "</br>";
+        }
+    }
     ?>
 </div3>
 
