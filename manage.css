@@ -5,17 +5,5 @@ div {
     text-align: center;
     color: blue;
 }
-div2 {
-    text-align: center;
-    color: chartreuse;
 
-}
-div5 div{
-    color: deeppink;
-}
-div5 div{
-    transition: 500ms;
-}
-div5 div:hover{
-    color: cyan;
-}
+
