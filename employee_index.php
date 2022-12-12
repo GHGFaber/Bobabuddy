@@ -1,4 +1,6 @@
 <?php
+//Name: Moises B. Fuentes
+//Client side view
 require_once("config.php");
 
 if (empty($_SESSION["logged_in"])) {

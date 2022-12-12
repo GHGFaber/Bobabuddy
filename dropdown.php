@@ -18,13 +18,10 @@ $category = $result0->fetch_assoc()
 <form method = "post">
 <label for="DrinkT">Choose a category:</label>
 <select name="DrinkT">
-  <option value=""> </option>
-  <option value="DrinkT"><?php foreach($category['categoryName']?></option>
+    <option value="DrinkT"><?php foreach($category['categoryName']?></option>
 </select>
 <input type = "submit">
 </form>
 </div>
-<p>=======
-</script>
 </body>
 </html>
