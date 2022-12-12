@@ -47,15 +47,20 @@ while ($drinks = $result1->fetch_assoc())
     echo "<option value=$drinks[drinkID] selected> $drinks[drinkName]</option>";
 echo "</select>";
 echo "</form>";
+
 echo $dog[0];
+
 //Drink Size Dropdown Menu//
 echo "<br>Drink Size: ";
-echo "<select id=DrinkSize class='form-control' style='width:80px;'>";
+echo "<select id=DrinkSize onChange='reloads()' class='form-control' style='width:80px;'>";
+$rat=$_GET['rat'];
 echo "<option value='L' selected>L</option>";
 echo "<option value='M' selected>M</option>";
 echo "<option value='S' selected>S</option>";
 echo "<option value='' selected>--Select--</option>";
 echo "</select>";
+
+echo $rat[0];
 
 //Drink Size Dropdown Menu//
 echo "<br>QTY.: ";
@@ -97,6 +102,12 @@ function reloadd()
 {
     var v2=document.getElementById('DrinkID').value;
     self.location='dropdown.php?dog=' + v2;
+
+}
+function reloads()
+{
+    var v3=document.getElementById('DrinkSize').value;
+    self.location='dropdown.php?rat=' + v3;
 
 }
 </script>
