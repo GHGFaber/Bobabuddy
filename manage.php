@@ -22,18 +22,6 @@ if (!empty($_SESSION["affected_rows"])) {
 
 <h2> Here is your drink roster <h2>
 
-<div> Alternate View </br>
-<form method = "post">
-<label for="Categories">Choose a category:</label>
-<select name="Categories">
-  <option value=""> </option>
-  <option value="MilkTea">MilkTea</option>
-  <option value="TropicalTea">TropicalTea</option>
-  <option value="Blended">Blended</option>
-</select>
-<input type = "submit">
-</form>
-
 <?php
 $db = get_mysqli_connection();
 if(isset($_POST['Categories']))
@@ -77,7 +65,21 @@ else if($varName == "Blended"){
         echo $row['drinkname']. "</br>";
     }
 }
+
+
 ?>
+
+<div> Alternate View </br>
+<form method = "post">
+<label for="Categories">Choose a category:</label>
+<select name="Categories">
+  <option value=""> </option>
+  <option value="MilkTea">MilkTea</option>
+  <option value="TropicalTea">TropicalTea</option>
+  <option value="Blended">Blended</option>
+</select>
+<input type = "submit">
+</form>
 </div>
 
 <h3>Top 5 Drinks Sold <h3>
