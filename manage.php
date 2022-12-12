@@ -130,6 +130,7 @@ else if($varName == "Blended"){
         }
     }
     ?>
+    <p>====================================================</p>
     <div> Alternate View </br>
     <form method = "post">
     <label for="CategoryV">Choose a category:</label>
@@ -142,6 +143,7 @@ else if($varName == "Blended"){
     <input type = "submit">
     </form>
     </div>
+    <p>====================================================</p>
 </div3>
 
 <div5>
