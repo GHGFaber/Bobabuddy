@@ -37,9 +37,7 @@ $query1->bind_param('i', $cat);
 $query1->execute();
 $result1 = $query1->get_result();
 
-echo "<select id=DrinkID name=DrinkID onChange ='reloadd()' class='form-control' style='width:150px;'>";
-
-$dog = $_GET['dog'];
+echo "<select id=DrinkID name=DrinkID  class='form-control' style='width:150px;'>";
 
 while ($drinks = $result1->fetch_assoc())
     echo "<option value=$drinks[drinkID] selected> $drinks[drinkName]</option>";
