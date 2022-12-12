@@ -155,13 +155,22 @@ else if($varName == "Blended"){
     ?>
 </div5>
 
-<script>
+<div6>
+<?php
+    $db = get_mysqli_connection();
+    $sql = "select * from ViewDrinksSold";
+    $result = $db->query($sql);
+    $row = $result->fetch_all(MYSQLI_ASSOC);
+    ?>
+    <script>
 	TESTER = document.getElementById('tester');
 	Plotly.newPlot( TESTER, [{
-	x: [1, 2, 3, 4, 5],
-	y: [1, 2, 4, 8, 16] }], {
+	x: [$row[0], 2, 3, 4, 5],
+	y: [1, 2, 4, 8, 60] }], {
 	margin: { t: 0 } } );
-</script>
+    </script>
+</div6>
+
 
 <?php /*
 $select_form = new PhpFormBuilder();
