@@ -283,8 +283,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 8px;
   vertical-align: middle;
 } */
-
-<li><a href="dropdown.php">Order Now</a></li></style>
+</style>
+<li><a href="dropdown.php">Order Now</a></li>
 </head>
 
 
