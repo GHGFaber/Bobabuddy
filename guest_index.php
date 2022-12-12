@@ -39,7 +39,7 @@ $query->execute();
 $result = $query->get_result();
 // $img = $result->fetch_all(MYSQLI_ASSOC);
 
-$query2 = $db->prepare("create table temp2 as select DID, drinkname, quantity, quantity*count(*) as total from temp1 group by DID  order by total desc limit 5");
+$query2 = $db->prepare("create table temp2 as select drinkname, DID, SUM(quantity) from temp1 natural join Drinklist group by DID order by SUM(quantity) desc limit 5");
 $query2->execute();
 $result2 = $query2->get_result();
 
@@ -66,7 +66,6 @@ $rows = $result->fetch_all();
   <input name="submit2" type="submit" id="submit2" value="Sign In">
   </label>
 </form>
-
 
 <?php
 echo '<div style=font-size:100;text-align:center;top:100px;><u>BOBA BUDDY</u></div>';
@@ -181,6 +180,7 @@ left: 50px;
 displayImageFromDatabase();
 
 
+
 $query5 = $db->prepare("drop table temp2");
 $query5->execute();
 $result5 = $query5->get_result();
@@ -284,9 +284,7 @@ h1, h2, h3, h4, h5, h6 {
   vertical-align: middle;
 } */
 
-</style>
-<li><a href="dropdown.php">Order Now</a></li>
-
+<li><a href="dropdown.php">Order Now</a></li></style>
 </head>
 
 
