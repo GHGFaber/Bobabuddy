@@ -9,7 +9,7 @@ require_once("config.php");
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?= $PROJECT_NAME ?></title>
     <link rel="stylesheet" href="manage.css">
-	<script src="plotly-2.16.1.min.js"></script>
+	<script src="plot.js"></script>
 </head>
 <body>
 <h1><?= $PROJECT_NAME?></h1>
