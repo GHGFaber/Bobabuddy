@@ -143,7 +143,7 @@ else if($varName == "Blended"){
     </div>
 </div3>
 
-<div5>
+v5><di
     <h1> All Orders </h1>
     <?php
     $db = get_mysqli_connection();
