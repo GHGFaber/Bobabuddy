@@ -84,7 +84,7 @@ else if($varName == "Blended"){
 </div>
 </div1>
 
-<h3>Top 5 Drinks Sold <h3>
+<h3>Top 5 Drinks Sold </h3>
 
 <div3>
     <?php

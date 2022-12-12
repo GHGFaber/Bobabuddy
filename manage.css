@@ -8,16 +8,23 @@ h1 {
 h2{
     color:white
 }
+h3{
+    color: white;
+}
 
 div1 {
     color:white
 }
 div {
+    color: white;
     align-items: left;
     font-size: 12pt;
     fill: cadetblue;
     border: 11px;
 
+}
+div3{
+    color:white
 }
 h2{
     color: beige;
