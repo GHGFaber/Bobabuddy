@@ -158,7 +158,7 @@ else if($varName == "Blended"){
 <div6>
 <?php
     $db = get_mysqli_connection();
-    $sql = "select * from ViewDrinksSold";
+    $sql = "select sum(quantity) from ViewDrinksSold";
     $result = $db->query($sql);
     $row = $result->fetch_all(MYSQLI_ASSOC);
     ?>
@@ -166,7 +166,7 @@ else if($varName == "Blended"){
 	TESTER = document.getElementById('tester');
 	Plotly.newPlot( TESTER, [{
 	x: [0, 2, 3, 4, 5],
-	y: [$row, 2, 4, 8, 12] }], {
+	y: [$row[0], 2, 4, 8, 12] }], {
 	margin: { t: 0 } } );
     </script>
 </div6>
