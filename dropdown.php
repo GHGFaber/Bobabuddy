@@ -17,7 +17,7 @@ $result0 = $query0->get_result();
 
 echo "<select id=DrinkType name=DrinkT onChange='reloadc()' class='form-control' style='width:100px;'>";
 
-$cat=$_GET['cat'];
+$cat=$_GET["cat"];
 
 echo "<option value='' selected>----Select----</option>";
 while ($category = $result0->fetch_assoc())
@@ -40,7 +40,7 @@ $result1 = $query1->get_result();
 
 echo "<select id=DrinkID name=DrinkID  onChange='reloadd()' class='form-control' style='width:150px;'>";
 
-$dog=$_GET['dog'];
+$dog=$_GET["dog"];
 
 echo "<option value='' selected>---------Select--------</option>";
 while ($drinks = $result1->fetch_assoc())
@@ -53,7 +53,7 @@ echo $dog[0];
 //Drink Size Dropdown Menu//
 echo "<br>Drink Size: ";
 echo "<select id=DrinkSize name=DrinkSize onChange='reloads()' class='form-control' style='width:80px;'>";
-$rat=$_GET['rat'];
+$rat=$_GET["rat"];
 echo "<option value='L' selected>L</option>";
 echo "<option value='M' selected>M</option>";
 echo "<option value='S' selected>S</option>";
@@ -65,7 +65,7 @@ echo $rat[0];
 //Drink Size Dropdown Menu//
 echo "<br>QTY.: ";
 echo "<select id=qty name=qty onChange='reloadp()' class='form-control' style='width:80px;'>";
-$rat=$_GET['pat'];
+$rat=$_GET["pat"];
 for($counter = 1; $counter <= 10; $counter++)
     echo "<option value=$counter selected>$counter</option>";
 echo "<option value='' selected>--Select--</option>";
