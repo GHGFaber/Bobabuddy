@@ -89,7 +89,9 @@ function placeOrder()
 function reload()
 {
     var v1=document.getElementById('DrinkType').value;
+    var v2=document.getElementById('DrinkID').value
     self.location='dropdown.php?cat=' + v1;
+    self.location='dropdown.php?dog=' + v2;
 }
 </script>
 </body>
