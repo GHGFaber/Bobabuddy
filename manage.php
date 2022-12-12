@@ -21,7 +21,7 @@ if (!empty($_SESSION["affected_rows"])) {
 ?>
 
 <h2> Here is your drink roster <h2>
-
+<div1>
 <?php
 $db = get_mysqli_connection();
 if(isset($_POST['Categories']))
@@ -81,7 +81,7 @@ else if($varName == "Blended"){
 <input type = "submit">
 </form>
 </div>
-
+</div1>
 <h3>Top 5 Drinks Sold <h3>
 
 <div3>
