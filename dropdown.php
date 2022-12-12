@@ -42,7 +42,7 @@ $result1 = $query1->get_result();
 
 echo "<select id=DrinkID name=DrinkID  onChange='reloadd()' class='form-control' style='width:150px;'>";
 
-$dog=$_GET['dog'];
+$dog=$_GET["dog"];
 
 echo "<option value='' selected>---------Select--------</option>";
 while ($drinks = $result1->fetch_assoc())
