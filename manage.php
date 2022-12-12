@@ -94,6 +94,7 @@ else if($varName == "Blended"){
         <option value="TropicalTea">TropicalTea</option>
         <option value="Blended">Blended</option>
     </select>
+    </div>
     <input type = "submit">
     </form>
     <?php
