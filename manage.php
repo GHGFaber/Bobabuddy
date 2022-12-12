@@ -161,7 +161,7 @@ else if($varName == "Blended"){
     $sql = "select * from ViewDrinksSold";
     $result = $db->query($sql);
     $row = $result->fetch_all(MYSQLI_ASSOC);
-    echo $row['sum(quantity)'];
+    echo $row['*'];
     ?>
     <script>
 	TESTER = document.getElementById('tester');
