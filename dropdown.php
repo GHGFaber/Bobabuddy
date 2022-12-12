@@ -11,7 +11,7 @@ $db = get_mysqli_connection();
 $query0 = $db->prepare("SELECT DISTINCT categoryID, categoryName FROM Drinklist");
 $query0->execute();
 $result0 = $query0->get_result();
-$category = $result0->fetch_assoc()
+$category = $result0->fetch_assoc();
 ?>
 <h2>Place an Order<br></h2>
 <div> Alternate View </br>
