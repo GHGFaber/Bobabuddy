@@ -12,6 +12,9 @@ div2 {
 div5 {
     color: deeppink;
 }
+div5{
+    transition: 500ms;
+}
 div5 :hover{
     color: cyan;
 }
