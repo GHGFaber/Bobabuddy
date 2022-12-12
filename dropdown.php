@@ -37,7 +37,7 @@ $query1->bind_param('i', $cat);
 $query1->execute();
 $result1 = $query1->get_result();
 
-echo "<select id=DrinkID name=DrinkID onChange ='reload()' class='form-control' style='width:150px;'>";
+echo "<select id=DrinkID name=DrinkID onChange ='reloadd()' class='form-control' style='width:150px;'>";
 
 $dog = $_GET['dog'];
 
@@ -85,11 +85,17 @@ function placeOrder()
 
 
 <script>
-function reload()
+function reloadc()
 {
     var v1=document.getElementById('DrinkType').value;
-    var v2=document.getElementById('DrinkID').value
     self.location='dropdown.php?cat=' + v1;
+
+}
+</script>
+<script>
+function reloadd()
+{
+    var v2=document.getElementById('DrinkID').value
     self.location='dropdown.php?dog=' + v2;
 }
 </script>
