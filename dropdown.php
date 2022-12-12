@@ -32,6 +32,7 @@ echo $cat[0];
 
 //Drink Dropdown Menu//
 echo "<br>Drink: ";
+echo "<form method = 'post'>";
 $query1 = $db->prepare("SELECT drinkID, drinkName FROM Drinklist WHERE categoryID=?");
 $query1->bind_param('i', $cat);
 $query1->execute();
@@ -45,6 +46,7 @@ while ($drinks = $result1->fetch_assoc())
     echo "<option value=$drinks[drinkID] selected> $drinks[drinkName]</option>";
 echo "<option value='' selected>---------Select--------</option>";
 echo "</select>";
+echo "</form>";
 
 //Drink Size Dropdown Menu//
 echo "<br>Drink Size: ";
