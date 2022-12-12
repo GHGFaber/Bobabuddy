@@ -1,6 +1,7 @@
 <?php
 require_once("config.php");
 ?>
+<div id = "woah" style="width:600px;height:250px;"></div>
 
 <html>
 <head>
@@ -8,6 +9,7 @@ require_once("config.php");
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title><?= $PROJECT_NAME ?></title>
     <link rel="stylesheet" href="manage.css">
+	<script src="plot.js"></script>
 </head>
 <body>
 <h1><?= $PROJECT_NAME?></h1>
@@ -152,6 +154,10 @@ else if($varName == "Blended"){
     echo makeTable($row);
     ?>
 </div5>
+
+<script>
+    Plotly.newPlot("myPlot", data, layout);
+</script>
 
 <?php /*
 $select_form = new PhpFormBuilder();
