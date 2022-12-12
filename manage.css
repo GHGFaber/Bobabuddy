@@ -5,7 +5,7 @@ h1 {
     text-align: left;
 }
 div {
-    text-align: left;
+    align-items: left;
     font-size: 12pt;
     fill: cadetblue;
     border: 11px;
