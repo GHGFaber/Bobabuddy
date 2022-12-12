@@ -26,6 +26,7 @@ while ($category = $result0->fetch_assoc())
     else
         echo "<option value=$category[categoryID]> $category[categoryName]</option>";
 echo "</select>";
+echo "<input type = 'submit'>"
 echo "</form>";
 
 
