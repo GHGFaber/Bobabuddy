@@ -160,7 +160,7 @@ else if($varName == "Blended"){
     $db = get_mysqli_connection();
     $sql = "select sum(quantity) from ViewDrinksSold";
     $result = $db->query($sql);
-    $row = $result->fetch_all(MYSQLI_ASSOC);
+    $row = $result->fetch_assoc();
     echo $row['sum(quantity)'];
     ?>
     <script>
