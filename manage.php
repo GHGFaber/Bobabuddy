@@ -370,10 +370,10 @@ if (isset($_POST["insert"]) && !empty($_POST["insert_data"]) && !empty($_POST["d
 <?php
 $update_form = new PhpFormBuilder();
 $update_form->set_att("method", "POST");
-$update_form->add_input("drinkID", array(
+$update_form->add_input("drinkID of drink to be updated:", array(
     "type" => "number"
 ), "update_id");
-$update_form->add_input("data to update", array(
+$update_form->add_input("New name:", array(
     "type" => "text"
 ), "update_data");
 $update_form->add_input("Update", array(
