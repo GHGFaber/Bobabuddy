@@ -61,16 +61,16 @@ echo "</select>";
 echo "</form>";
 //Button//
 
-if(isset($_POST["Order"]) && isset($_POST["DrinkT"]))
+if(isset($_POST['Order']) && isset($_POST['DrinkT']))
 {
-    $store = $_POST["DrinkT"];
+    $store = $_POST['DrinkT'];
     var_dump($store);
 }
 function placeOrder()
 {
-    // $db = get_mysqli_connection();
-    // $queryOrder = $db->prepare("INSERT INTO `Order`(orderID) VALUE (NULL)");
-    // $queryOrder->execute();
+    //$db = get_mysqli_connection();
+    //$queryOrder = $db->prepare("INSERT INTO `Order`(orderID) VALUE (NULL)");
+    //$queryOrder->execute();
     echo "This will place an order";
 }
 ?>
