@@ -83,18 +83,11 @@ function placeOrder()
 
 
 <script>
-function reloadc()
+function reload()
 {
     var v1=document.getElementById('DrinkType').value;
     self.location='dropdown.php?cat=' + v1;
 
-}
-</script>
-<script>
-function reloadd()
-{
-    var v2=document.getElementById('DrinkID').value
-    self.location='dropdown.php?dog=' + v2;
 }
 </script>
 </body>
