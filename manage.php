@@ -166,7 +166,7 @@ else if($varName == "Blended"){
 	TESTER = document.getElementById('tester');
 	Plotly.newPlot( TESTER, [{
 	x: [0, 2, 3, 4, 5],
-	y: [$row[0], 2, 4, 8, 12] }], {
+	y: [$row, 2, 4, 8, 12] }], {
 	margin: { t: 0 } } );
     </script>
 </div6>
