@@ -30,6 +30,7 @@ div5 h1{
     color: white;
     text-align: center;
     width: 500px;
+    height: 1000px;
     border-radius: 25px;
     padding: 50px;
     margin: 20px;
@@ -37,16 +38,7 @@ div5 h1{
     box-shadow: 10px 10px;
     
 }
-div5{
-    background-color: white;
-    text-align: center;
-    width: 1000px;
-    border-radius: 25px;
-    padding: 50px;
-    margin: 20px;
-    background-color: rgb(17, 17, 16);
-    box-shadow: 10px 10px;
-}
+
 h2{
     color: beige;
     text-align: center;
