@@ -9,12 +9,12 @@ div {
 
 }
 h2{
+    color: beige;
     width: 300px;
-    border-color: blue;
     border-radius: 25px;
     padding: 50px;
     margin: 20px;
-    background-color: blanchedalmond;
+    background-color: rgb(17, 17, 16);
 }
 
 
