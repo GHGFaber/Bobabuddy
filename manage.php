@@ -85,18 +85,6 @@ else if($varName == "Blended"){
 <h3>Top 5 Drinks Sold <h3>
 
 <div3>
-    <div> Alternate View </br>
-    <form method = "post">
-    <label for="CategoryV">Choose a category:</label>
-    <select name="CategoriesV">
-        <option value=""> </option>
-        <option value="MilkTea">MilkTea</option>
-        <option value="TropicalTea">TropicalTea</option>
-        <option value="Blended">Blended</option>
-    </select>
-    <input type = "submit">
-    </form>
-    </div>
     <?php
     if(isset($_POST['CategoriesV']))
     {
@@ -139,6 +127,18 @@ else if($varName == "Blended"){
         }
     }
     ?>
+    <div> Alternate View </br>
+    <form method = "post">
+    <label for="CategoryV">Choose a category:</label>
+    <select name="CategoriesV">
+        <option value=""> </option>
+        <option value="MilkTea">MilkTea</option>
+        <option value="TropicalTea">TropicalTea</option>
+        <option value="Blended">Blended</option>
+    </select>
+    <input type = "submit">
+    </form>
+    </div>
 </div3>
 
 <div5>
