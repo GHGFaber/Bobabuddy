@@ -42,7 +42,7 @@ div5 h1{
 }
 
 h2,h3{
-    color: beige;
+    color: rgb(255, 255, 255);
     text-align: center;
     width: 300px;
     border-radius: 25px;
