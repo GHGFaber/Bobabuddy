@@ -69,7 +69,7 @@ else if($varName == "Blended"){
 
 
 ?>
-
+<p>====================================================</p>
 <div> Alternate View </br>
 <form method = "post">
 <label for="Categories">Choose a category:</label>
@@ -83,7 +83,7 @@ else if($varName == "Blended"){
 </form>
 </div>
 </div1>
-
+<p>====================================================</p>
 <h3>Top 5 Drinks Sold </h3>
 
 <div3>
