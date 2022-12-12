@@ -28,6 +28,8 @@ while ($category = $result0->fetch_assoc())
 echo "</select>";
 echo "</form>";
 
+echo $cat[0];
+
 //echo $cat[0];
 
 //Drink Dropdown Menu//
