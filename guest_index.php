@@ -181,7 +181,6 @@ left: 50px;
 displayImageFromDatabase();
 
 
-
 $query5 = $db->prepare("drop table temp2");
 $query5->execute();
 $result5 = $query5->get_result();
@@ -286,6 +285,8 @@ h1, h2, h3, h4, h5, h6 {
 } */
 
 </style>
+<li><a href="dropdown.php">Order Now</a></li>
+
 </head>
 
 

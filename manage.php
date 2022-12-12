@@ -1,4 +1,6 @@
 <?php
+//Moises B. Fuentes
+//client side view of drinks, top5, and transaction metrics. 
 require_once("config.php");
 ?>
 

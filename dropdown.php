@@ -1,4 +1,8 @@
+
+
 <?php
+//Bryan Ayapantecatl and Moises B. Fuentes
+//Ordering system for guests/customer.
 require_once("config.php");
 ?>
 
