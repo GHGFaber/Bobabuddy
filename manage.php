@@ -140,6 +140,7 @@ else if($varName == "Blended"){
 
 <div5>
     <h1> All Orders </h1>
+    <div>
     <?php
     $db = get_mysqli_connection();
     $sql = "select indexID, OID, DID, drinksize, quantity, drinkname, timestamp  from Item NATURAL JOIN Drinklist, `Order` where DID = drinkID AND orderID = OID";
@@ -147,6 +148,7 @@ else if($varName == "Blended"){
     $row = $result->fetch_all(MYSQLI_ASSOC);
     echo makeTable($row);
     ?>
+    </div>
 </div5>
 
 <?php /*
