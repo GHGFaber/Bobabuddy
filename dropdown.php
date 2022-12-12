@@ -38,11 +38,15 @@ $query1->execute();
 $result1 = $query1->get_result();
 
 echo "<select id=DrinkID class='form-control' style='width:150px;'>";
+
+$dog = $_GET['dog'];
+
 while ($drinks = $result1->fetch_assoc())
     echo "<option value=$drinks[drinkID] selected> $drinks[drinkName]</option>";
 echo "<option value='' selected>---------Select--------</option>";
 echo "</select>";
 
+echo $dog[0];
 //Drink Size Dropdown Menu//
 echo "<br>Drink Size: ";
 echo "<select id=DrinkSize class='form-control' style='width:80px;'>";
