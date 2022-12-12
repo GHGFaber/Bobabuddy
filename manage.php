@@ -35,6 +35,7 @@ if (!empty($_SESSION["affected_rows"])) {
 </form>
 
 <?php
+$db = get_mysqli_connection();
 if(isset($_POST['Categories']))
 {
     $varName = $_POST['Categories'];
@@ -46,7 +47,6 @@ else
 
 if($varName == "")
 {
-    $db = get_mysqli_connection();
     $query = $db->prepare("SELECT drinkname FROM Drinklist");
     $query->execute();
 
@@ -55,16 +55,7 @@ if($varName == "")
         echo $row['drinkname']. "</br>";
     }
 }
-?>
-</div>
-<div2>
-<?php
-$db = get_mysqli_connection();
-if(isset($_POST['Categories']))
-{
-    $varName = $_POST['Categories'];
-}
-if($varName == "MilkTea"){
+else if($varName == "MilkTea"){
     $sql = "select drinkname from ViewMT";
     $result = $db->query($sql);
     while($row = $result->fetch_assoc()){
@@ -87,7 +78,7 @@ else if($varName == "Blended"){
     }
 }
 ?>
-</div2>
+</div>
 
 <h3>Top 5 Drinks Sold <h3>
 
