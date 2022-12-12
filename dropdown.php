@@ -28,7 +28,7 @@ while ($category = $result0->fetch_assoc())
 echo "</select>";
 echo "</form>";
 
-echo $cat['categoryID'];
+echo $cat[0];
 
 //Drink Dropdown Menu//
 echo "<br>Drink: ";
