@@ -17,7 +17,7 @@ $result0 = $query0->get_result();
 
 echo "<select id=DrinkType name=DrinkT onChange='reload()' class='form-control' style='width:100px;'>";
 
-$cat=$_GET['cat'];
+$cat=$_GET['DrinkT'];
 
 echo "<option value='' selected>----Select----</option>";
 while ($category = $result0->fetch_assoc())
