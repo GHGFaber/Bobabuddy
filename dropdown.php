@@ -11,9 +11,8 @@ require_once("config.php");
 <div> Alternate View </br>
 <?php
 $db = get_mysqli_connection();
-$query0 = $db->prepare("SELECT DISTINCT categoryID, categoryName FROM Drinklist");
-$query0->execute();
-$result0 = $query0->get_result();
+$sql = "select distinct categoryID, categoryName from Drinklist";
+$result0 = $db->query($sql);
 $category = $result0->fetch_assoc();
 ?>
 <form method = "post">
