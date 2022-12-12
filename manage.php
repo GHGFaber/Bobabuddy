@@ -138,7 +138,7 @@ else if($varName == "Blended"){
             }
     }
     else if($varName == "Blended"){
-        $sql = "select drinkname from ViewTop5Bl";
+        $sql = "select drinkname from ViewTop5BL";
         $result = $db->query($sql);
         while($row = $result->fetch_assoc()){
             echo $row['drinkname']. "</br>";
