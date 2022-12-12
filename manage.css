@@ -13,7 +13,7 @@ h3{
 }
 
 div1 {
-    color:white
+    color:white;
 }
 div {
     color: white;
@@ -24,10 +24,18 @@ div {
 
 }
 div3{
-    color:white
+    color:white;
 }
 div5 h1{
-    color: white
+    color: white;
+    text-align: center;
+    width: 300px;
+    border-radius: 25px;
+    padding: 50px;
+    margin: 20px;
+    background-color: rgb(17, 17, 16);
+    box-shadow: 10px 10px;
+    
 }
 div5{
     background-color: white;
