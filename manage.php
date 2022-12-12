@@ -1,7 +1,6 @@
 <?php
 require_once("config.php");
 ?>
-<div id = "tester" style="width:600px;height:250px;"></div>
 
 <html>
 <head>
