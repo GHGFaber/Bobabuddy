@@ -155,22 +155,6 @@ else if($varName == "Blended"){
     </h1>
 </div5>
 
-<div6>
-<?php
-    $db = get_mysqli_connection();
-    $sql = "select * from ViewDrinksSold";
-    $result = $db->query($sql);
-    $row = $result->fetch_all(MYSQLI_ASSOC);
-    echo $row['*'];
-    ?>
-    <script>
-	TESTER = document.getElementById('tester');
-	Plotly.newPlot( TESTER, [{
-	x: [0, 2, 3, 4, 5],
-	y: [$row, 2, 4, 8, 12] }], {
-	margin: { t: 0 } } );
-    </script>
-</div6>
 
 
 <?php /*
@@ -332,11 +316,11 @@ foreach($rows as $row) {
 }
 
 
-$insert_form->add_input("data to insert: drinkName", array(
+$insert_form->add_input("Specify the new drink's name:", array(
     "type" => "text"
 ), "insert_data");
 
-$insert_form->add_input("data to insert: categoryName", array(
+$insert_form->add_input("Specify the category:", array(
     "type" => "select", 
     "options" => [$rowdata0,$rowdata1,$rowdata2],
 
