@@ -158,53 +158,6 @@ else if($varName == "Blended"){
     </h1>
 </div5>
 
-
-
-<?php /*
-$select_form = new PhpFormBuilder();
-$select_form->set_att("method", "POST");
-$select_form->add_input("id to search for", array(
-    "type" => "number"
-), "search_id");
-$select_form->add_input("data to search for", array(
-    "type" => "text"
-), "search_data");
-$select_form->add_input("Submit", array(
-    "type" => "submit",
-    "value" => "Search"
-), "search");
-$select_form->build_form();
-
-if (isset($_POST["search"])) {
-    echo "searching...<br>";
-
-    $db = get_mysqli_connection();
-    $query = false;
-
-    if (!empty($_POST["search_id"])) {
-        echo "searching by id...";
-        $query = $db->prepare("select * from hello where id = ?");
-        $query->bind_param("i", $_POST["search_id"]);
-    }
-    else if (!empty($_POST["search_data"])) {
-        echo "searching by data...";
-        $query = $db->prepare("select * from hello where data = ?");
-        $query->bind_param("s", $_POST["search_data"]);
-    }
-    if ($query) {
-        $query->execute();
-        $result = $query->get_result();
-        $rows = $result->fetch_all(MYSQLI_ASSOC);
-        echo makeTable($rows);
-    }
-    else{
-        echo "Error executing query: " . mysqli_error();
-    }
-}*/
-
-?>
-
-
 <?php
 $db = get_mysqli_connection();
 $query = $db->prepare("SELECT DISTINCT categoryName from Drinklist WHERE categoryName = 'MilkTea' ");
