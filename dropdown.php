@@ -91,8 +91,6 @@ function reloadc()
 {
     var v1=document.getElementById('DrinkType').value;
     self.location='dropdown.php?cat=' + v1;
-    var v2=document.getElementById('DrinkID').value;
-    self.location='dropdown.php?dog=' + v2;
 
 }
 function reloadd()
