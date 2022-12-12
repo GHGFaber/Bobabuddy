@@ -7,7 +7,6 @@ require_once("config.php");
 
 <?php
 //DrinkType Dropdown Menu//
-echo "<form method = 'post'>";
 echo "<label for='DrinkType'>Drink Type: </label>";
 
 $db = get_mysqli_connection();
@@ -26,8 +25,6 @@ while ($category = $result0->fetch_assoc())
     else
         echo "<option value=$category[categoryID]> $category[categoryName]</option>";
 echo "</select>";
-echo "</form>";
-
 
 //Drink Dropdown Menu//
 echo "<br>Drink: ";
